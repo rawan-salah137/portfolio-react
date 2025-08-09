@@ -1,0 +1,16 @@
+@media (max-width: 576px) {
+  .container {
+    padding: 20px; /* smaller padding for small screens */
+  }
+}
+
+body {
+    height: 100vh;
+}
+
+#root {
+  background-color: black;
+  color: pink;
+  min-height: 100vh;
+}
+

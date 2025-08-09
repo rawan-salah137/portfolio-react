@@ -1,0 +1,325 @@
+body {
+    background-color: black;
+    color: pink;
+}
+.navbar-nav li a {
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    color: pink;
+    transition: color 0.25s;
+}
+.navbar-nav .nav-link::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: white;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+.navbar-nav .nav-link:hover {
+    color: rgb(195, 134, 144);
+}
+.navbar-nav .nav-link:hover::after {
+    scale: 1 1;
+}
+.navLink-style {
+    background-color: white;
+    color: rgb(195, 134, 144);
+    border-radius: 10px;
+}
+.bars {
+    color: pink;
+}
+.my-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    max-width: 500px;
+    max-height: 500px;
+}
+.position h2 {
+    color: pink;
+    font-size: 30px;
+}
+.position h1 {
+    color: pink;
+    text-transform: none;
+}
+
+.position {
+    color: rgb(94, 49, 56);
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+}
+
+.flip {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.flip > div {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: show 9s ease-in-out infinite;
+}
+
+.flip > div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.flip > div:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.flip > div:nth-child(3) {
+    animation-delay: 6s;
+}
+.position p {
+    color: #b66878;
+}
+
+#education {
+    border-top: 5px solid #b66878;
+    position: absolute;
+    padding: 20px;
+}
+
+.sparkle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 1s infinite;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.sparkle-1 {
+    bottom: 40px;
+    left: 80px;
+}
+.sparkle-2 {
+    bottom: 40px;
+    left: 65px;
+}
+
+#education p {
+    max-width: 300px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* From Uiverse.io by kamehame-ha */
+.light-button button.bt {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.light-button button.bt .button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: #0a0a0a;
+  border-radius: 5px;
+  color: #0f0f0f;
+  font-weight: 700;
+  transition: 300ms;
+  outline: #0f0f0f 2px solid;
+  outline-offset: 20;
+}
+
+.light-button button.bt .button-holder svg {
+  height: 50px;
+  fill: #0f0f0f;
+  transition: 300ms;
+}
+
+.light-button button.bt .light-holder {
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-button button.bt .light-holder .dot {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.light-button button.bt .light-holder .light {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  background: transparent;
+}
+
+.light-button button.bt:hover .button-holder svg {
+  fill: rgba(88, 101, 242, 1);
+}
+
+.light-button button.bt:hover .button-holder {
+  color: pink;
+  outline: rgb(94, 49, 56) 2px solid;
+  outline-offset: 2px;
+}
+
+.light-button button.bt:hover .light-holder .light {
+  background: linear-gradient(
+    180deg,
+    rgb(94, 49, 56) 0%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+
+
+@keyframes twinkle {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+}
+
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    40% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@media (max-width: 992px) {
+    .position h2 {
+        font-size: 36px;
+    }
+
+    .position h1 {
+        font-size: 30px;
+    }
+
+    .my-img {
+        width: 80%;
+        height: auto;
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav li a {
+        font-size: 18px;
+    }
+
+    .position  {
+        text-align: center;
+    }
+
+    .my-img {
+        width: 70%;
+        height: auto;
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav li a {
+        font-size: 16px;
+    }
+
+    .position h2 {
+        font-size: 24px;
+    }
+
+    .position h1 {
+        font-size: 20px;
+    }
+
+    .my-img {
+        width: 60%;
+        height: auto;
+        max-width: 250px;
+        max-height: 250px;
+    }
+}
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px #b66878;
+}
+
+.card-body h5  {
+    color: #b66878;
+}
+.card-body p  {
+    color: #67343e;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.button {
+    background-color: pink;
+}
+.button:hover {
+    background-color: #b66878;
+}

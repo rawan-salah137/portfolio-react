@@ -1,0 +1,227 @@
+
+
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px #b66878;
+}
+
+.card-body h5  {
+    color: #b66878;
+}
+
+.card-body p  {
+    color: #67343e;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.button {
+    background-color: pink;
+}
+
+.button:hover {
+    background-color: #b66878;
+}
+
+.more-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem; /* adds spacing from the cards */
+  height: auto; /* remove 100vh so it stays right under the cards */
+}
+
+
+
+
+button {
+  border: 0;
+  background: radial-gradient(ellipse at 50% 50%,black 20%,transparent 72%);
+  font-size: 17px;
+  height: 200px;
+  width: 300px;
+  zoom: 1.2;
+}
+
+.main {
+  width: 70px;
+  margin: auto;
+  position: relative;
+  transform: rotateZ(0deg);
+  isolation: isolate;
+  scale: 1;
+  transition: all 1.5s;
+}
+
+.main:hover {
+  transform: rotateZ(240deg);
+  scale: 2;
+  filter: drop-shadow(-1px -1px 5px pink);
+  -webkit-filter: drop-shadow(-1px -1px 5px rgb(65, 42, 46));
+}
+
+.rings {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  /* background-color: #000000; */
+  border-radius: 150px 150px 0 0;
+  background: radial-gradient(circle at 50% 100%,transparent 30%, rgb(63, 39, 43) 40%,#404D44 50%,pink 60%,rgb(133, 79, 88) 70%,transparent);
+}
+
+#saturn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(80deg, rgb(48 31 34), #564346, rgb(115 54 64));
+}
+
+#ring1 {
+  transform: rotateX(80deg);
+  top: -20px;
+  left: -65px;
+}
+
+#ring2 {
+  transform: rotateX(-100deg);
+  left: -65px;
+  z-index: -1;
+  top: -3px;
+}
+
+.asteriods-large {
+  position: absolute;
+  width: 8px;
+  height: 10px;
+  border-radius: 15px 8px;
+  background: linear-gradient(220deg,rgb(63, 39, 43),pink,rgb(133, 79, 88));
+  transform: rotateZ(0deg);
+  transition: all 3s;
+}
+
+#asteriod1 {
+  top: 8px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+#asteriod2 {
+  top: 35px;
+  height: 10px;
+  left: -55px;
+}
+
+#asteriod3 {
+  top: 35px;
+  height: 8px;
+  left: 85px;
+}
+
+#asteriod4 {
+  top: 40px;
+  height: 4px;
+  width: 4px;
+  left: -40px;
+}
+
+#asteriod5 {
+  top: 35px;
+  height: 4px;
+  width: 4px;
+  left: 82px;
+}
+
+.asteriods-small {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  border-radius: 15px 8px;
+  background: linear-gradient(80deg,rgb(132, 80, 89),pink,rgb(133, 79, 88));
+  transform: rotateZ(0deg);
+  transition: all 3s;
+}
+
+#asteriod6 {
+  top: 6px;
+  left: -5px;
+  border-radius: 50%;
+}
+
+#asteriod7 {
+  top: 15px;
+  left: -35px;
+}
+
+#asteriod8 {
+  top: 35px;
+  left: 65px;
+}
+
+#asteriod9 {
+  top: 60px;
+  left: -10px;
+}
+
+#asteriod10 {
+  top: 15px;
+  left: 112px;
+}
+
+#explore {
+  position: absolute;
+  top: -1px;
+  font-size: 12px;
+  font-weight: bold;
+  color: pink;
+  left: 15px;
+  transition: all 3s;
+}
+
+#more {
+    position: absolute;
+    top: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    color: pink;
+    left: 10px;
+}
+
+.main:hover > .asteriods-large,.main:hover > .asteriods-small {
+  transform: translateX(28px);
+}
+
+.main:hover > #explore {
+  translate: -10px 20px;
+  transform: rotateZ(120deg);
+}
+.main:hover > #more {
+  translate: -10px 20px;
+  transform: rotateZ(120deg);
+}
+
+.main:hover > #more {
+    translate: -27px 20px;
+    transform: rotateZ(120deg);
+}
+
+.main:not(hover) > .asteriods-large,.main:not(hover) > .asteriods-small {
+  transform: translateX(0px);
+}
+
+.main:is(:active) > #explore {
+  translate: -100px 200px;
+}
+
+.main:is(:active) {
+  translate: -200px;
+}
+
